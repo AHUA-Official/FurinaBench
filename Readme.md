@@ -1,5 +1,0 @@
-Readme
-
-Furinabench是一款提供基础性能benchmark的all in  one项目
-
-提供基础性能benchmark工具的安装部署使用方法和部分调优经验
