@@ -51,3 +51,5 @@ ip6_dst_cache       5040   5040    448   36    4 : tunables    0    0    0 : sla
 # 统计slab占用超过10M的对象
 cat /proc/slabinfo |awk '{if($3*$4/1024/1024 > 10){print $1,$3*$4/1024/1024} }'
 ```
+
+待完善

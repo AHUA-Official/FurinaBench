@@ -868,3 +868,5 @@ https://arthurchiao.art/blog/intro-to-io-uring-zh/
 | :---------: | :-----------: | :--------------------: | :----------: | :--------------------------: |
 |     无      | io=threads'/> |           无           |      无      |              否              |
 | native aio  | io=native'/>  |     libvirt>=0.8.8     |    >=2.6     |              是              |
+
+待完善

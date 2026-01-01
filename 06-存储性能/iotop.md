@@ -30,3 +30,5 @@ yum   install   iotop   -y
 - **SWAPIN**: 交换 (Swap In)。显示该线程从交换分区中调入数据的百分比。
 - **IO%**: I/O等待时间百分比 (I/O Wait Time Percentage)。显示该线程的I/O操作占用的CPU时间百分比。
 - **COMMAND**: 命令 (Command)。显示执行该操作的命令或进程
+
+待完善

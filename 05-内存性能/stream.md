@@ -1104,3 +1104,5 @@ gcc -O -fopenmp -DSTREAM_ARRAY_SIZE=25165824 -DNTIMES=20 stream.c -o stream.o
 ## Attachments:
 
 ​                                                            ![img](./assets/bullet_blue.gif)                                [image2024-11-11_14-7-8.png](file:///E:/github/Confluence-space-export-082101-45.html/lei.zhang/attachments/182132530/182132533.png) (image/png)                                
+
+待完善

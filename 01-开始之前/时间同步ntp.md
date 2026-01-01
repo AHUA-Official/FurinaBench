@@ -53,3 +53,6 @@ configure_ntp $SERVER2
 echo "NTP配置和时间同步完成。"
 ```
 
+
+
+待完善

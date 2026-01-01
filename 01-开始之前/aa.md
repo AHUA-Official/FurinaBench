@@ -78,3 +78,5 @@
 **QPS**：Query per Second，每秒执行的请求数量，一般使用在数据库系统中，指数据库服务器每秒中处理的Query语句数量
 
 **PPS**：Package per Second，每秒发送/接收的package数，一般用于网络传输吞吐量
+
+待完善

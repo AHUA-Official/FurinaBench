@@ -25,3 +25,5 @@ rm  -rf  output.txt
 (netperf  -t  TCP_RR  127.0.0.1 -l 60) | tail -n 2 | head -n 1 | awk '{print substr($0,length($0)-13)}'
 (netperf  -t  TCP_RR  127.0.0.1 -l 60) | tail -n 2 | head -n 1 | awk '{print substr($0,length($0)-13)}'
 ```
+
+待完善
