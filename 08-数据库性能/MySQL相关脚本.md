@@ -20,22 +20,22 @@ mysql>exit
 
 
 
-mysql -uroot -p'Furina@1013' -e "USE information_schema; SELECT CONCAT(ROUND(SUM(data_length/1024/1024),2),'MB') AS data FROM tables;"
+mysql -uroot -p'<DB密码见本机凭据备忘>' -e "USE information_schema; SELECT CONCAT(ROUND(SUM(data_length/1024/1024),2),'MB') AS data FROM tables;"
 ```
 
 
 
 ## 法二  每一个数据库的大小
 
-mysql -uroot -p'Furina@1013' -e "SELECT table_schema 'Database', CONCAT(ROUND(SUM(data_length)/1024/1024, 2),  'MB') AS 'Data Size' FROM information_schema.tables GROUP BY  table_schema;"
+mysql -uroot -p'<DB密码见本机凭据备忘>' -e "SELECT table_schema 'Database', CONCAT(ROUND(SUM(data_length)/1024/1024, 2),  'MB') AS 'Data Size' FROM information_schema.tables GROUP BY  table_schema;"
 
 
 
 ```
-mysql -uroot -p'Furina@1013' -e "SELECT table_schema 'Database', CONCAT(ROUND(SUM(data_length)/1024/1024, 2), 'MB') AS 'Data Size' FROM information_schema.tables GROUP BY table_schema;"
+mysql -uroot -p'<DB密码见本机凭据备忘>' -e "SELECT table_schema 'Database', CONCAT(ROUND(SUM(data_length)/1024/1024, 2), 'MB') AS 'Data Size' FROM information_schema.tables GROUP BY table_schema;"
 
 
-[root@172-25-133-132 ~]# mysql -uroot -p'Furina@1013' -e "SELECT table_schema 'Database', CONCAT(ROUND(SUM(data_length)/1024/1024, 2), 'MB') AS 'Data Size' FROM information_schema.tables GROUP BY table_schema;"
+[root@172-25-133-132 ~]# mysql -uroot -p'<DB密码见本机凭据备忘>' -e "SELECT table_schema 'Database', CONCAT(ROUND(SUM(data_length)/1024/1024, 2), 'MB') AS 'Data Size' FROM information_schema.tables GROUP BY table_schema;"
 mysql: [Warning] Using a password on the command line interface can be insecure.
 +--------------------+-----------+
 | Database           | Data Size |

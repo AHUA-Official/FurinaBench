@@ -34,9 +34,9 @@
 echo "执行数据库和软件包依赖安装操作。"
 
 echo "尝试以root用户登录MySQL，并创建名为'sbtest'的数据库，然后列出所有数据库。"
-mysql -uroot -p'Furina@1013' -e "create database sbtest;" -e "show databases;"
+mysql -uroot -p'<DB密码见本机凭据备忘>' -e "create database sbtest;" -e "show databases;"
 echo "再次列出所有数据库，以确认'sbtest'数据库是否已创建。"
-mysql -uroot -p'Furina@1013' -e "show databases;"
+mysql -uroot -p'<DB密码见本机凭据备忘>' -e "show databases;"
 
 echo "安装编译工具，包括gcc, gcc-c++, autoconf, automake, make, libtool。"
 yum install gcc gcc-c++ autoconf automake make libtool  -y
@@ -87,8 +87,8 @@ sudo yum install autoconf automake libtool
 ./configure --prefix=/usr
  make
 make install
-sysbench  ./src/lua/oltp_read_write.lua --table_size=100 --tables=64 --threads=32 --db-driver=mysql --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=Furina@1013 prepare
-sysbench  ./src/lua/oltp_read_write.lua --table_size=100 --tables=64 --threads=32  --table_size=100  --db-driver=mysql --db-driver=mysql --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=Furina@1013 cleanup
+sysbench  ./src/lua/oltp_read_write.lua --table_size=100 --tables=64 --threads=32 --db-driver=mysql --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=<DB密码见本机凭据备忘> prepare
+sysbench  ./src/lua/oltp_read_write.lua --table_size=100 --tables=64 --threads=32  --table_size=100  --db-driver=mysql --db-driver=mysql --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=<DB密码见本机凭据备忘> cleanup
 ```
 
 
@@ -105,9 +105,9 @@ sysbench  ./src/lua/oltp_read_write.lua --table_size=100 --tables=64 --threads=3
 
 ```
  cd /dbtest/sysbench-1.0.17
-sysbench  ./src/lua/oltp_read_write.lua --table_size=10000 --tables=64 --threads=32 --db-driver=mysql  --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=Furina@1013 prepare
-sysbench  ./src/lua/oltp_read_write.lua --table_size=10000 --tables=64 --threads=32  --db-driver=mysql --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=Furina@1013    --time=180  run
-sysbench  ./src/lua/oltp_read_write.lua --table_size=10000 --tables=64 --threads=32  --db-driver=mysql --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=Furina@1013 cleanup
+sysbench  ./src/lua/oltp_read_write.lua --table_size=10000 --tables=64 --threads=32 --db-driver=mysql  --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=<DB密码见本机凭据备忘> prepare
+sysbench  ./src/lua/oltp_read_write.lua --table_size=10000 --tables=64 --threads=32  --db-driver=mysql --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=<DB密码见本机凭据备忘>    --time=180  run
+sysbench  ./src/lua/oltp_read_write.lua --table_size=10000 --tables=64 --threads=32  --db-driver=mysql --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=<DB密码见本机凭据备忘> cleanup
 ```
 
 
@@ -127,9 +127,9 @@ sysbench  ./src/lua/oltp_read_write.lua --table_size=10000 --tables=64 --threads
 ```
 echo "完整的一轮sysbench测试  单表10万级别   64表单     32线程   测试时长180s "
  cd /dbtest/sysbench-1.0.17
-sysbench  ./src/lua/oltp_read_write.lua --table_size=100000 --tables=64 --threads=32 --db-driver=mysql  --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=Furina@1013 prepare
-sysbench  ./src/lua/oltp_read_write.lua --table_size=100000 --tables=64 --threads=32  --db-driver=mysql --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=Furina@1013    --time=180  run
-sysbench  ./src/lua/oltp_read_write.lua --table_size=100000 --tables=64 --threads=32  --db-driver=mysql --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=Furina@1013 cleanup
+sysbench  ./src/lua/oltp_read_write.lua --table_size=100000 --tables=64 --threads=32 --db-driver=mysql  --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=<DB密码见本机凭据备忘> prepare
+sysbench  ./src/lua/oltp_read_write.lua --table_size=100000 --tables=64 --threads=32  --db-driver=mysql --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=<DB密码见本机凭据备忘>    --time=180  run
+sysbench  ./src/lua/oltp_read_write.lua --table_size=100000 --tables=64 --threads=32  --db-driver=mysql --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=<DB密码见本机凭据备忘> cleanup
 ```
 
 
